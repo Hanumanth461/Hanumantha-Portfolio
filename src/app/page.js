@@ -1,10 +1,11 @@
-import Banner from "@/components/Banner";
+import HomeWrapper from "./HomeWrapper";
 import styles from "./page.module.css";
+
 
 export default function Home() {
   return (
     <main>
-      <Banner/>
+      <HomeWrapper/>
     </main>
   );
 }
