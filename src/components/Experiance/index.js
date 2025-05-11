@@ -27,7 +27,7 @@ margin: 1rem 0;
 padding-left: 1.2rem;
 line-height: 1.3;
 @media screen and (max-width:768px) {
-    font-size: .8rem;
+    font-size: .9rem;
 }
 `
 const ListHeading = styled.div`
@@ -35,9 +35,6 @@ font-size: 1rem;
 font-family: 'Courier New', Courier, monospace;
 margin: 1rem 0;
 font-weight: 600;
-@media screen and (max-width:768px) {
-    font-size: .9rem;
-}
 `
 const ExperianceBlock = styled.div`
 display: grid;
