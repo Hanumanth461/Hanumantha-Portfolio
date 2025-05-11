@@ -64,7 +64,7 @@ const Experiance = () => {
                         <li>Write clean, maintainable, and scalable code using JavaScript, TypeScript, ReactJS,NextJs</li>
                         <li>Optimize applications for maximum speed, scalability, and performance.</li>
                         <li>Integrate RESTful APIs services with front-end logic.</li>
-                        <li>Createing reusable compnents for better understanding and clean code using ReactJS or NextJS</li>
+                        <li>Creating a reusable components for better understanding and clean code using ReactJS or NextJS</li>
                         <li>Collaborate with back-end developers, designers, and product managers.</li>
                         <li>Implement SEO best practices in server-side rendered (SSR) pages using Next.js.</li>
                         <li>Manage routing, static generation (SSG), and SSR features with Next.js.</li>
