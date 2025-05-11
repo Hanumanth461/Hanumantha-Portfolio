@@ -25,7 +25,7 @@ const Contact = () => {
             </ContactInfo>
             <ContactInfo style={{marginBottom:"3rem",display:"flex",alignItems:"center",gap:".5rem"}}>
                 <Link href="https://github.com/Hanumanth461">
-                    <Image src="/assets/githhub.png" width={22} height={21} />
+                    <Image src="/assets/githhub.png" alt='github' width={22} height={21} />
                 </Link>
                 <Link href="https://www.linkedin.com/in/hanumantha-t-a6278b18b/">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">

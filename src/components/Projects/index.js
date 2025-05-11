@@ -88,9 +88,9 @@ const Projects = () => {
       <ProjectsTitle>Projects</ProjectsTitle>
       <ProjectsTitle style={{ fontSize: "1rem" }}>ReactJS and NextJS Projects</ProjectsTitle>
       <ProjectGrid>
-        {ProjectData?.map((item) => {
+        {ProjectData?.map((item,index) => {
           return (
-            <Card >
+            <Card key={index} >
               <Images style={{ cursor: "pointer" }} onClick={() => handleRedirect(item)} src={item.image} width={100} height={100} />
               <ProjectHeading>
                 {item.heading}
@@ -106,9 +106,9 @@ const Projects = () => {
 
       <ProjectsTitle style={{ marginTop: "3rem", fontSize: "1rem" }}>Hubspot CMS Projects</ProjectsTitle>
       <ProjectGrid>
-        {CMSProjectData?.map((item) => {
+        {CMSProjectData?.map((item,idx) => {
           return (
-            <Card style={{ cursor: "pointer" }}>
+            <Card key={idx} style={{ cursor: "pointer" }}>
               <Link target='_blank' href={item.link}>
                 <Images src={item.image} width={100} height={100} />
            

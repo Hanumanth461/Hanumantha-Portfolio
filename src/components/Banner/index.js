@@ -75,7 +75,6 @@ font-size: .9rem;
 @media screen and (max-width:768px) {
   font-size: .85rem;
 }
-
 `
 
 const Banner = () => {
@@ -94,14 +93,14 @@ const Banner = () => {
           user-friendly web interfaces. Proficient in modern HTML, CSS, and JavaScript frameworks like ReactJS, NextJS and Redux, with a strong understanding of UI/UX principles and cross-browser compatibility. Experienced in collaborating with designers and back-end developers to bring digital products to life.
           Adept at turning complex problems into elegant, accessible solutions.
         </ProfileSummary>
-        <Button style={{background:"#2A2E38",textTransform:"capitalize",marginTop:"1rem"}}>
+        <Button style={{ background: "#2A2E38", textTransform: "capitalize", marginTop: "1rem" }}>
           <Link
-          target='_blank'
-          href="/Hanumantha_SE.pdf"
-          download="/Hanumantha_SE.pdf">
-          Download CV
+            target='_blank'
+            href="/Hanumantha_SE.pdf"
+            download="/Hanumantha_SE.pdf">
+            Download CV
           </Link>
-          </Button>
+        </Button>
       </ProfileInfoBlock>
 
     </BannerWrapper>
