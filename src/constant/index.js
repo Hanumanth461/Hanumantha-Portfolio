@@ -17,6 +17,10 @@ export const SkillsImages = [
     },
     {
         image:"/assets/react.png",
+        label:"NextJS"
+    },
+    {
+        image:"/assets/react.png",
         label:"ReactJS"
     },
     {
