@@ -7,12 +7,18 @@ font-size: 1.5rem;
 font-weight: 600;
 margin:2rem 0  1rem;
 font-family: 'Courier New', Courier, monospace;
+@media screen and (max-width:768px) {
+    font-size: 1.2rem;
+}
 `
 
 const CompanyNameBlock = styled.div`
     font-size: 1.2rem;
     font-weight: 500;
     font-family: 'Courier New', Courier, monospace;
+    @media screen and (max-width:768px) {
+    font-size: 1rem;
+}
 `
 const ListBlock = styled.ul`
 font-size: .9rem;
@@ -20,28 +26,36 @@ font-family: 'Courier New', Courier, monospace;
 margin: 1rem 0;
 padding-left: 1.2rem;
 line-height: 1.3;
+@media screen and (max-width:768px) {
+    font-size: .8rem;
+}
 `
 const ListHeading = styled.div`
 font-size: 1rem;
 font-family: 'Courier New', Courier, monospace;
 margin: 1rem 0;
 font-weight: 600;
+@media screen and (max-width:768px) {
+    font-size: .9rem;
+}
 `
 const ExperianceBlock = styled.div`
 display: grid;
-grid-template-columns: repeat(2,1fr);
+grid-template-columns: repeat(1,1fr);
 gap: 1rem;
+@media screen and (max-width:768px) {
+    grid-template-columns: repeat(1,1fr);
+}
 `
 
 const Experiance = () => {
     return (
-        <>
-            <ProjectHeading>Work experiance</ProjectHeading>
+        <div id='Experience'>
+            <ProjectHeading>Work experience</ProjectHeading>
             <ExperianceBlock>
                 <div>
                     <CompanyNameBlock>
-                        ThinkJS Pvt Ltd, Bengaluru
-                        <div>Software Engineer</div>
+                        ThinkJS Pvt Ltd, Bengaluru -                         <span>Software Engineer</span>
                         <div> Aug 2023 - May 2025</div>
                     </CompanyNameBlock>
                     <ListHeading>
@@ -60,11 +74,14 @@ const Experiance = () => {
                         <li>Participate in code reviews and contribute to improving code quality.</li>
                         <li>Use version control (Git) and tools like GitHub or Bitbucket or Jira for collaboration.</li>
                     </ListBlock>
+                    <ListBlock>
+                        <strong>Projects :</strong> Spontaa, KnowThyWithIn, Lifedemy.
+                    </ListBlock>
                 </div>
                 <div>
                     <CompanyNameBlock>
-                        Iosys Solutions India Pvt Ltd, Bengaluru
-                        <div>Web Developer </div>
+                        Iosys Solutions India Pvt Ltd, Bengaluru - 
+                        <span> Web Developer </span>
                         <div> Oct 2021 - July 2023</div>
                     </CompanyNameBlock>
                     <ListHeading>
@@ -80,9 +97,12 @@ const Experiance = () => {
                             <li>Optimize websites for performance, accessibility, and SEO within the HubSpot ecosystem.</li>
                             <li>Ensure cross-browser compatibility and responsive behavior across all devices.</li>
                     </ListBlock>
+                    <ListBlock>
+                        <strong>Projects :</strong> NextPathWay, GK3 Capital, J.Morries Flower, Benevity.
+                    </ListBlock>
                 </div>
             </ExperianceBlock>
-        </>
+        </div>
     )
 }
 

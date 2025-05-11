@@ -1,6 +1,6 @@
 "use client"
 
-import { SkillsImages } from '@/constant';
+import { SkillsImages, ToolsImages } from '@/constant';
 import Image from 'next/image';
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
@@ -32,21 +32,38 @@ const Slider = styled.div`
 
 const SlideTrack = styled.div`
   display: flex;
-  width: calc(90px * ${SkillsImages.length * 2}); /* Double the width for duplicated images */
-  animation: ${scroll} 15s linear infinite;
+  width: calc(150px * ${SkillsImages.length * 2}); /* Double the width for duplicated images */
+  animation: ${scroll} 30s linear infinite;
 `;
 
 const ReverseSlideTrack = styled.div`
   display: flex;
-  width: calc(90px * ${SkillsImages.length * 2}); /* Double the width for duplicated images */
-  animation: ${revscroll} 15s linear infinite;
+  width: calc(150px * ${ToolsImages.length * 2}); /* Double the width for duplicated images */
+  animation: ${revscroll} 25s linear infinite;
 `;
 
-const Slide = styled(Image)`
-  width: 90px;
+// const Slide = styled.div`
+//   width: 90px;
+//   height: auto;
+//   margin-right: 10px;
+//   background: black;
+// `;
+
+const Slide = styled.div`
+  width: 150px;
   height: auto;
   margin-right: 10px;
-  background: black;
+  /* background: black; */
+  text-align: center;
+  font-size: .9rem;
+  padding:1rem 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: .5rem 0rem .5rem 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Helvetica;
+  font-weight: 500;
 `;
  
 const Heading = styled.div`
@@ -64,28 +81,35 @@ const SkillsSets = () => {
     // Duplicate images for seamless scroll
     const imagesToRender = [...SkillsImages, ...SkillsImages];
 
-    const SliderImages = () => {
+    const toolsImagesToRender = [...ToolsImages, ...ToolsImages];
+
+    const SliderImages = (imagesRender) => {
         return (
             <>
-                {imagesToRender.map((item, index) => (
-                    <Slide key={index} src={item.image} width={90} height={90} alt={`skill-${index}`} />
+                {imagesRender?.map((item, index) => (
+                   <Slide key={index} style={{background:"transparent"}}>
+                    {item.label}
+                     {/* <Image key={index} src={item.image} width={90} height={90} alt={`skill-${index}`} /> */}
+                   </Slide>
                 ))}
             </>
         )
     }
 
     return (
-        <SkillWrapper>
+        <SkillWrapper id='Skills'>
             <Heading>Skill's</Heading>
+            <Heading style={{fontSize:".9rem",marginTop:"10px"}}>Languages</Heading>
             <Slider>
                 <SlideTrack>
-                    {SliderImages()}
+                    {SliderImages(imagesToRender)}
                     
                 </SlideTrack>
             </Slider>
+            <Heading style={{fontSize:".9rem",marginTop:"10px"}}>Tools</Heading>
             <Slider>
                 <ReverseSlideTrack>
-                    {SliderImages()}
+                    {SliderImages(toolsImagesToRender)}
                 </ReverseSlideTrack>
             </Slider>
         </SkillWrapper>
