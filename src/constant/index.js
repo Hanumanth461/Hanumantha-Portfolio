@@ -101,7 +101,7 @@ export const ProjectData = [
         heading:"KnowThyWithIn",
         link:"https://www.knowthywithin.com/en",
         myRole:`Built and deployed a Progressive Web App (PWA) using Next.js, providing native-like performance across devices. Designed a real-time session booking system with robust form validation and user-friendly components for smooth appointment scheduling. Developed and maintained dynamic landing pages integrated with REST APIs, boosting user engagement and SEO. Contributed to the KTW Meeting platform integration using AWS Chime SDK, enabling secure one-on-one video sessions with mental health and career experts. Built the “Book a Session” feature from scratch, including intuitive UI and seamless API integration. Also contributed to the KTW Admin Dashboard, streamlining management for platform administrators.`,
-        description:"  A mental	health and career counselling platform providing services like expert video	sessions an appointments"
+        description:"  A mental	health and career counselling platform providing services like expert video	sessions an appointments."
     },
     {
         image:"/assets/LD.png",

@@ -99,7 +99,7 @@ const SkillsSets = () => {
     return (
         <SkillWrapper id='Skills'>
             <Heading>Skill's</Heading>
-            <Heading style={{fontSize:".9rem",marginTop:"10px"}}>Languages</Heading>
+            <Heading style={{fontSize:".9rem",marginTop:"10px"}}>Tech Stack</Heading>
             <Slider>
                 <SlideTrack>
                     {SliderImages(imagesToRender)}

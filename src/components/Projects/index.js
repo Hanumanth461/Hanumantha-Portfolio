@@ -45,7 +45,6 @@ padding: 10px;
 border-radius: 20px;
 background-color: #2A2E38;
 color: white;
-cursor: pointer;
 
 `
 const ProjectGrid = styled.div`
@@ -70,6 +69,7 @@ border-radius: 20px;
 const Projects = () => {
   const [open, setOpen] = useState(false);
   const [projectDetails, setProjectDetails] = useState("")
+  const router = useRouter()
 
   const handleOpen = (item) => {
     setOpen(true)
@@ -77,6 +77,9 @@ const Projects = () => {
   };
   const handleClose = () => setOpen(false);
 
+  const handleRedirect = (item)=>{
+    router.push(item.link)
+  }
 
   return (
     <div id="Projects">
@@ -87,13 +90,13 @@ const Projects = () => {
       <ProjectGrid>
         {ProjectData?.map((item) => {
           return (
-            <Card onClick={() => handleOpen(item)}>
-              <Images src={item.image} width={100} height={100} />
+            <Card >
+              <Images style={{cursor:"pointer"}} onClick={()=>handleRedirect(item)} src={item.image} width={100} height={100} />
               <ProjectHeading>
                 {item.heading}
               </ProjectHeading>
               <ProjectDescription>
-                {item.description}
+                {item.description}<span onClick={() => handleOpen(item)} style={{color:"purple",cursor:"pointer"}}>Readmore</span>
               </ProjectDescription>
             </Card>
           )

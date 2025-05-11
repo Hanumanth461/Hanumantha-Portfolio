@@ -7,17 +7,21 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 550,
-  bgcolor: 'black',
-  border: '1px solid #000',
-  boxShadow: 24,
-  p: 4,
-};
+const BoxBlock = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 550px;
+  background-color: #212224;
+  border:0;
+  padding: 20px;
+
+  @media screen and (max-width:600px) {
+    width: 320px;
+  }
+
+`
 
 const MyRoleBlock = styled.div`
 font-family: 'Courier New', Courier, monospace;
@@ -39,7 +43,7 @@ export default function ModalV1(props) {
         aria-describedby="modal-modal-description"
       >
 
-        <Box sx={style}>
+        <BoxBlock>
         <span style={{display:"flex",justifyContent:"right",cursor:"pointer"}} onClick={handleClose}>X</span>
           <Typography id="modal-modal-title" variant="h6" component="h2" >
             {projectDetails.heading}
@@ -50,7 +54,7 @@ export default function ModalV1(props) {
           {projectDetails.link &&
           <Link target='_blank' style={{color:"blue",textDecoration:"underline",marginTop:"10px"}} href={projectDetails?.link}>{projectDetails?.link}</Link>  }
                  
-        </Box>
+        </BoxBlock>
       </Modal>
     </div>
   );
