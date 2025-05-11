@@ -77,7 +77,7 @@ const Projects = () => {
   };
   const handleClose = () => setOpen(false);
 
-  const handleRedirect = (item)=>{
+  const handleRedirect = (item) => {
     router.push(item.link)
   }
 
@@ -86,17 +86,17 @@ const Projects = () => {
       <ModalV1 projectDetails={projectDetails} open={open} handleClose={handleClose} />
 
       <ProjectsTitle>Projects</ProjectsTitle>
-      <ProjectsTitle style={{fontSize:"1rem"}}>ReactJS and NextJS Projects</ProjectsTitle>
+      <ProjectsTitle style={{ fontSize: "1rem" }}>ReactJS and NextJS Projects</ProjectsTitle>
       <ProjectGrid>
         {ProjectData?.map((item) => {
           return (
             <Card >
-              <Images style={{cursor:"pointer"}} onClick={()=>handleRedirect(item)} src={item.image} width={100} height={100} />
+              <Images style={{ cursor: "pointer" }} onClick={() => handleRedirect(item)} src={item.image} width={100} height={100} />
               <ProjectHeading>
                 {item.heading}
               </ProjectHeading>
               <ProjectDescription>
-                {item.description}<span onClick={() => handleOpen(item)} style={{color:"purple",cursor:"pointer"}}>Readmore</span>
+                {item.description}<span onClick={() => handleOpen(item)} style={{ color: "purple", cursor: "pointer" }}>Readmore</span>
               </ProjectDescription>
             </Card>
           )
@@ -104,21 +104,21 @@ const Projects = () => {
 
       </ProjectGrid>
 
-      <ProjectsTitle style={{ marginTop: "3rem",fontSize:"1rem" }}>Hubspot CMS Projects</ProjectsTitle>
+      <ProjectsTitle style={{ marginTop: "3rem", fontSize: "1rem" }}>Hubspot CMS Projects</ProjectsTitle>
       <ProjectGrid>
         {CMSProjectData?.map((item) => {
           return (
-            <Card style={{cursor:"auto"}}>
-              <Images src={item.image} width={100} height={100} />
-              <div>
+            <Card style={{ cursor: "pointer" }}>
               <Link target='_blank' href={item.link}>
+                <Images src={item.image} width={100} height={100} />
+              </Link>
+              <div>
                 <ProjectHeading>
                   {item.heading}
                 </ProjectHeading>
-              </Link>
-              <ProjectDescription>
-                {item.description}
-              </ProjectDescription>
+                <ProjectDescription>
+                  {item.description}
+                </ProjectDescription>
               </div>
             </Card>
           )
