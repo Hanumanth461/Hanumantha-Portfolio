@@ -111,7 +111,7 @@ const Projects = () => {
             <Card style={{ cursor: "pointer" }}>
               <Link target='_blank' href={item.link}>
                 <Images src={item.image} width={100} height={100} />
-              </Link>
+           
               <div>
                 <ProjectHeading>
                   {item.heading}
@@ -120,6 +120,7 @@ const Projects = () => {
                   {item.description}
                 </ProjectDescription>
               </div>
+              </Link>
             </Card>
           )
         })}
