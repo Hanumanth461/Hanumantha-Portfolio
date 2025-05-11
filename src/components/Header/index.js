@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import MobileHeader from './MobileHeader'
+import Image from 'next/image'
 
 const HeaderWrapper = styled.div`
 position: fixed;
@@ -24,7 +25,7 @@ justify-content: space-between;
     margin: 0 auto;
 `
 const Logo = styled.div`
-font-size: 1.2rem;
+font-size: 1.5rem;
 background-color:  rgba(38, 38, 123, 0.25);
 width: 50px;
 height: 50px;
@@ -32,7 +33,12 @@ border-radius: 50%;
 display: flex;
 align-items:center;
 justify-content: center;
+color: purple;
+font-weight: 600;
+font-family: 'Courier New', Courier, monospace;
+font-style: italic;
 `
+
 const ListItem = styled(Link)`
   margin: 0 5px;
   padding: 5px;
@@ -62,7 +68,8 @@ const Header = () => {
       {showContent &&
         <HeaderWrapper>
           <Logo>
-            HT
+            {/* HT */}
+            <Image src="/assets/HTLogo.png" width={50} height={50} style={{objectFit:"cover"}}/>
           </Logo>
           {!isMobile ?
                    <ULBlock>
