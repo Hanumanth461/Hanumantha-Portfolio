@@ -36,7 +36,7 @@ const ProjectDescription = styled.div`
   font-size: .9rem;
   font-family: 'Courier New', Courier, monospace;
   @media screen and (max-width:768px) {
-    font-size: .85rem;
+    font-size: .9rem;
 }
 `
 

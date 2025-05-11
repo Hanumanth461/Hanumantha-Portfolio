@@ -72,9 +72,7 @@ const ProfileName = styled.div`
 const ProfileSummary = styled.div`
 line-height: 1.5;
 font-size: .9rem;
-@media screen and (max-width:768px) {
-  font-size: .85rem;
-}
+
 `
 
 const Banner = () => {
