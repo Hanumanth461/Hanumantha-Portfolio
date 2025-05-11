@@ -69,13 +69,13 @@ const Header = () => {
         <HeaderWrapper>
           <Logo>
             {/* HT */}
-            <Image src="/assets/HTLogo.png" width={50} height={50} style={{objectFit:"cover"}}/>
+            <Image src="/assets/HTLogo.png" alt='logo' width={50} height={50} style={{objectFit:"cover"}}/>
           </Logo>
           {!isMobile ?
                    <ULBlock>
-                   {HeaderConfig?.map((item) => {
+                   {HeaderConfig?.map((item,index) => {
                      return (
-                       <ListItem href={`#${item.name}`}>{item.name}</ListItem>
+                       <ListItem key={index} href={`#${item.name}`}>{item.name}</ListItem>
                      )
                    })}
                  </ULBlock>

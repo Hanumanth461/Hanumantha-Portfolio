@@ -41,9 +41,9 @@ const MobileHeader = () => {
             <Button style={{marginRight:"-1rem"}} onClick={toggleDrawer(true)}><Menu/></Button>
             <Drawer open={open} onClose={toggleDrawer(false)}>
                 <ULBlock>
-                    {HeaderConfig?.map((item) => {
+                    {HeaderConfig?.map((item,index) => {
                         return (
-                            <ListItem onClick={toggleDrawer(false)} href={`#${item.name}`}>{item.name}</ListItem>
+                            <ListItem key={index} onClick={toggleDrawer(false)} href={`#${item.name}`}>{item.name}</ListItem>
                         )
                     })}
                 </ULBlock>
