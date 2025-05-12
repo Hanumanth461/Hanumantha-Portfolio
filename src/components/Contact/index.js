@@ -1,3 +1,4 @@
+import { poppins } from '@/constant'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -12,7 +13,6 @@ margin:2rem 0 .5rem;
 
 const ContactInfo = styled.div`
 font-size: .8rem;
-font-family: 'Courier New', Courier, monospace;
 font-weight: 500;
 `
 
@@ -20,7 +20,7 @@ const Contact = () => {
     return (
         <div id='Contact'>
             <ContactHeading>Contact</ContactHeading>
-            <ContactInfo style={{marginBottom:".5rem"}}>
+            <ContactInfo className={poppins.className} style={{marginBottom:".5rem"}}>
                 <Link href="mailto:hanumanth.ht461@gmail.com">Email : hanumanth.ht461@gmail.com</Link>
             </ContactInfo>
             <ContactInfo style={{marginBottom:"3rem",display:"flex",alignItems:"center",gap:".5rem"}}>

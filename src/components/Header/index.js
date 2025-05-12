@@ -1,6 +1,6 @@
 "use client"
 
-import { HeaderConfig } from '@/constant'
+import { HeaderConfig, poppins } from '@/constant'
 import { useMediaQuery } from '@mui/material'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
@@ -72,7 +72,7 @@ const Header = () => {
             <Image src="/assets/HTLogo.png" alt='logo' width={50} height={50} style={{objectFit:"cover"}}/>
           </Logo>
           {!isMobile ?
-                   <ULBlock>
+                   <ULBlock className={poppins.className}>
                    {HeaderConfig?.map((item,index) => {
                      return (
                        <ListItem key={index} href={`#${item.name}`}>{item.name}</ListItem>

@@ -1,6 +1,6 @@
 "use client"
 
-import { SkillsImages, ToolsImages } from '@/constant';
+import { poppins, SkillsImages, ToolsImages } from '@/constant';
 import Image from 'next/image';
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
@@ -87,7 +87,7 @@ const SkillsSets = () => {
         return (
             <>
                 {imagesRender?.map((item, index) => (
-                   <Slide key={index} style={{background:"transparent"}}>
+                   <Slide className={poppins.className} key={index} style={{background:"transparent"}}>
                     {item.label}
                      {/* <Image key={index} src={item.image} width={90} height={90} alt={`skill-${index}`} /> */}
                    </Slide>

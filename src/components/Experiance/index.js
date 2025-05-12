@@ -1,3 +1,4 @@
+import { poppins } from '@/constant'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -15,17 +16,18 @@ font-family: 'Courier New', Courier, monospace;
 const CompanyNameBlock = styled.div`
     font-size: 1.2rem;
     font-weight: 500;
-    font-family: 'Courier New', Courier, monospace;
     @media screen and (max-width:768px) {
     font-size: 1rem;
 }
 `
 const ListBlock = styled.ul`
 font-size: .9rem;
-font-family: 'Courier New', Courier, monospace;
 margin: 1rem 0;
 padding-left: 1.2rem;
 line-height: 1.3;
+li{
+    margin: 5px 0;
+}
 @media screen and (max-width:768px) {
     font-size: .9rem;
 }
@@ -49,9 +51,9 @@ const Experiance = () => {
     return (
         <div id='Experience'>
             <ProjectHeading>Work experience</ProjectHeading>
-            <ExperianceBlock>
+            <ExperianceBlock className={poppins.className}>
                 <div>
-                    <CompanyNameBlock>
+                    <CompanyNameBlock className={poppins.className}>
                         ThinkJS Pvt Ltd, Bengaluru -                         <span>Software Engineer</span>
                         <div> Aug 2023 - May 2025</div>
                     </CompanyNameBlock>
