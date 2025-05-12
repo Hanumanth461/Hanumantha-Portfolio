@@ -23,13 +23,12 @@ const ProjectsTitle = styled.div`
 const ProjectHeading = styled.div`
   font-size: 1rem;
   font-weight: 600;
-  font-family: 'Courier New', Courier, monospace;
   margin-bottom: 10px;
-  color: purple;
+  color: #c8534d;
   text-decoration: underline;
   margin-top: .2rem;
   @media screen and (max-width:768px) {
-    font-size: .9rem;
+    font-size: 1rem;
 }
 `
 const ProjectDescription = styled.div`
@@ -96,7 +95,7 @@ const Projects = () => {
                 {item.heading}
               </ProjectHeading>
               <ProjectDescription>
-                {item.description}<span onClick={() => handleOpen(item)} style={{ color: "purple", cursor: "pointer" }}>Readmore</span>
+                {item.description}<span onClick={() => handleOpen(item)} style={{ color: "#c8534d", cursor: "pointer" }}>Readmore</span>
               </ProjectDescription>
             </Card>
           )
