@@ -1,5 +1,6 @@
 "use client"
 
+import { poppins } from '@/constant'
 import { Button } from '@mui/material'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -13,7 +14,6 @@ const BannerWrapper = styled.div`
     max-width: 1000px;
     margin: 0 auto;
     align-items: center;
-    font-family: 'Courier New', Courier, monospace;
     flex-wrap: wrap;
     @media screen and (max-width:768px){
       display: block;
@@ -55,6 +55,7 @@ const ProfileInfoBlock = styled.div`
 const ProfileDesignation = styled.div`  
 font-size: 1.5rem;
 font-weight: 600;
+font-family: 'Courier New', Courier, monospace;
 @media screen and (max-width:768px){
   font-size: 1.2rem;
 
@@ -63,9 +64,9 @@ font-weight: 600;
 const ProfileName = styled.div`
     font-size: 2rem;
     margin-bottom: 1rem;
+    font-family: 'Courier New', Courier, monospace;
     @media screen and (max-width:768px){
-  font-size: 1.2rem;
-
+     font-size: 1.2rem;
     }
 
 `
@@ -77,7 +78,7 @@ font-size: .9rem;
 
 const Banner = () => {
   return (
-    <BannerWrapper id='About'>
+    <BannerWrapper className={poppins.className} id='About'>
       <ProfileImageBlock>
         <ProfileImage src="/assets/Hanumanth_img.jpg" alt='profile-pic' width={240} height={240} />
       </ProfileImageBlock>

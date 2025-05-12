@@ -1,6 +1,6 @@
 "use client"
 
-import { HeaderConfig } from '@/constant'
+import { HeaderConfig, poppins } from '@/constant'
 import { Menu } from '@mui/icons-material'
 import { Button, Drawer } from '@mui/material'
 import Link from 'next/link'
@@ -40,7 +40,7 @@ const MobileHeader = () => {
         <div>
             <Button style={{marginRight:"-1rem"}} onClick={toggleDrawer(true)}><Menu/></Button>
             <Drawer open={open} onClose={toggleDrawer(false)}>
-                <ULBlock>
+                <ULBlock className={poppins.className}>
                     {HeaderConfig?.map((item,index) => {
                         return (
                             <ListItem key={index} onClick={toggleDrawer(false)} href={`#${item.name}`}>{item.name}</ListItem>

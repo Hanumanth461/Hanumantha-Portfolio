@@ -25,7 +25,7 @@ const HomeWrapper = () => {
     return () => clearTimeout(timer);
   }, []);
     return (
-        <HomeContainer style={{marginTop:"6rem",maxWidth:"1000px"}}>
+        <HomeContainer style={{marginTop:"6rem",maxWidth:"1000px",margin:"6rem  auto 0"}}>
             {showContent ?
           <>
             <Banner />

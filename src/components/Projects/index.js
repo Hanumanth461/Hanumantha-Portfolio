@@ -4,7 +4,7 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import ModalV1 from '../Modal'
-import { CMSProjectData, ProjectData } from '@/constant'
+import { CMSProjectData, poppins, ProjectData } from '@/constant'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 
@@ -24,7 +24,7 @@ const ProjectHeading = styled.div`
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 10px;
-  color: #c8534d;
+  color: #6bc9ff;
   text-decoration: underline;
   margin-top: .2rem;
   @media screen and (max-width:768px) {
@@ -33,7 +33,6 @@ const ProjectHeading = styled.div`
 `
 const ProjectDescription = styled.div`
   font-size: .9rem;
-  font-family: 'Courier New', Courier, monospace;
   @media screen and (max-width:768px) {
     font-size: .9rem;
 }
@@ -86,7 +85,7 @@ const Projects = () => {
 
       <ProjectsTitle>Projects</ProjectsTitle>
       <ProjectsTitle style={{ fontSize: "1rem" }}>ReactJS and NextJS Projects</ProjectsTitle>
-      <ProjectGrid>
+      <ProjectGrid className={poppins.className}>
         {ProjectData?.map((item,index) => {
           return (
             <Card key={index} >
@@ -95,7 +94,7 @@ const Projects = () => {
                 {item.heading}
               </ProjectHeading>
               <ProjectDescription>
-                {item.description}<span onClick={() => handleOpen(item)} style={{ color: "#c8534d", cursor: "pointer" }}>Readmore</span>
+                {item.description}<span onClick={() => handleOpen(item)} style={{ color: "#6bc9ff", cursor: "pointer" }}>readmore</span>
               </ProjectDescription>
             </Card>
           )
@@ -104,7 +103,7 @@ const Projects = () => {
       </ProjectGrid>
 
       <ProjectsTitle style={{ marginTop: "3rem", fontSize: "1rem" }}>Hubspot CMS Projects</ProjectsTitle>
-      <ProjectGrid>
+      <ProjectGrid  className={poppins.className}>
         {CMSProjectData?.map((item,idx) => {
           return (
             <Card key={idx} style={{ cursor: "pointer" }}>

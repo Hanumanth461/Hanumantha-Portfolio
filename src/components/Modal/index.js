@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import { Modal,Typography } from '@mui/material';
 import Link from 'next/link';
 import styled from 'styled-components';
+import { poppins } from '@/constant';
 
 
 const BoxBlock = styled.div`
@@ -24,10 +25,9 @@ const BoxBlock = styled.div`
 `
 
 const MyRoleBlock = styled.div`
-font-family: 'Courier New', Courier, monospace;
 font-size: .9rem;
 margin: .5rem 0;
-line-height: 1.2;
+line-height: 1.5;
 `
 
 
@@ -43,7 +43,7 @@ export default function ModalV1(props) {
         aria-describedby="modal-modal-description"
       >
 
-        <BoxBlock>
+        <BoxBlock className={poppins.className}>
         <span style={{display:"flex",justifyContent:"right",cursor:"pointer"}} onClick={handleClose}>X</span>
           <Typography id="modal-modal-title" variant="h6" component="h2" >
             {projectDetails.heading}

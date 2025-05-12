@@ -1,3 +1,5 @@
+import { Poppins } from "next/font/google"
+
 export const SkillsImages = [
     {
         image:"/assets/Html.jpg",
@@ -161,3 +163,9 @@ export const HeaderConfig = [
         name:"Contact",
     }
 ]
+
+
+export const poppins = Poppins({
+  weight: '300',
+  subsets: ['latin'],
+})
