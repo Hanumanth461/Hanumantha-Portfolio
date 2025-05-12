@@ -11,7 +11,7 @@ const ListItem = styled(Link)`
   margin: 0 5px;
   padding: 5px;
   font-weight: 400;
-  font-size: .8rem;
+  font-size: .9rem;
 `
 const ULBlock = styled.div`
 display: flex;
