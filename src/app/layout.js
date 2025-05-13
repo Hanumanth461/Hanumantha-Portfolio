@@ -2,6 +2,7 @@ import "./globals.css";
 import Head from "next/head";
 import Header from "@/components/Header";
 import { poppins } from "@/constant";
+import { Analytics } from '@vercel/analytics/next';
  
 
 export const metadata = {
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
       <body style={{maxWidth:"1400px",margin:"0 auto",padding:"0 1rem"}} className={poppins.className}>
         <Header/>
         {children}
+        <Analytics />
       </body>
     </html>
   );
