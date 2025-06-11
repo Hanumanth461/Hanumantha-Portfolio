@@ -55,7 +55,7 @@ const Experiance = () => {
                 <div>
                     <CompanyNameBlock className={poppins.className}>
                         ThinkJS Pvt Ltd, Bengaluru -                         <span>Software Engineer</span>
-                        <div> Aug 2023 - May 2025</div>
+                        <div> Aug 2023 - Present</div>
                     </CompanyNameBlock>
                     <ListHeading>
                         Responsibilities

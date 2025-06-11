@@ -95,8 +95,8 @@ const Banner = () => {
         <Button style={{ background: "#2A2E38", textTransform: "capitalize", marginTop: "1rem" }}>
           <Link
             target='_blank'
-            href="/Hanumantha_SE.pdf"
-            download="/Hanumantha_SE.pdf">
+            href="/SE_Hanumantha.pdf"
+            download="/SE_Hanumantha.pdf">
             Download CV
           </Link>
         </Button>
