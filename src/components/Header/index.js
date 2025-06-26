@@ -26,16 +26,14 @@ justify-content: space-between;
 `
 const Logo = styled.div`
 font-size: 1.5rem;
-background-color:  rgba(38, 38, 123, 0.25);
+background-color: gray;
 width: 50px;
 height: 50px;
 border-radius: 50%;
 display: flex;
-align-items:center;
+align-items: center;
 justify-content: center;
-color: purple;
-font-weight: 600;
-font-family: 'Courier New', Courier, monospace;
+color: black;
 font-style: italic;
 `
 
@@ -67,9 +65,9 @@ const Header = () => {
     <>
       {showContent &&
         <HeaderWrapper>
-          <Logo>
-            {/* HT */}
-            <Image src="/assets/HTLogo.png" alt='logo' width={50} height={50} style={{objectFit:"cover"}}/>
+          <Logo className={`${poppins.className}`}>
+              HT
+            {/* <Image src="/assets/HTLogo.png" alt='logo' width={50} height={50} style={{objectFit:"cover"}}/> */}
           </Logo>
           {!isMobile ?
                    <ULBlock className={poppins.className}>
