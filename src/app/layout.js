@@ -2,6 +2,7 @@ import "./globals.css";
 import Head from "next/head";
 import { poppins } from "@/constant";
 import AppLayout from "./appLayout";
+import ScrollToTop from "@/components/ScrollToTop";
  
 
 export const metadata = {
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
       <body style={{maxWidth:"1400px",margin:"0 auto",padding:"0 1rem"}} className={poppins.className}>
         <AppLayout>
           {children}
+          <ScrollToTop/>
         </AppLayout>
       </body>
     </html>
