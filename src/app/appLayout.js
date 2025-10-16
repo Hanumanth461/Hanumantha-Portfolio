@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
 import { ThemeProvider as StyledThemeProvider } from 'styled-components';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -8,10 +8,15 @@ import Header from '@/components/Header';
 import { darkTheme, lightTheme } from '@/theme/theme';
 
 const AppLayout = ({ children }) => {
+  const [mode, setMode] = useState('light');
 
-   const themeVal = localStorage.getItem("theme")  ?? "light"
-  const [mode, setMode] = useState(themeVal);
-
+  useEffect(() => {
+    const storedTheme = localStorage.getItem('theme') 
+    if (storedTheme) {
+      setMode(storedTheme);
+    }
+  }, []);
+  
   const theme = useMemo(() => (mode === 'dark' ? darkTheme : lightTheme), [mode]);
 
   return (
