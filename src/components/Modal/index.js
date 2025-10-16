@@ -14,10 +14,11 @@ const BoxBlock = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   width: 550px;
-  background-color: #212224;
+  /* background-color: #212224; */
   border:0;
   padding: 20px;
-
+  background-color: ${({ theme }) => theme.palette.background.paper} !important;
+  color:  ${({ theme }) => theme.palette.primary.main} !important;;
   @media screen and (max-width:600px) {
     width: 320px;
   }

@@ -73,7 +73,13 @@ const ProfileName = styled.div`
 const ProfileSummary = styled.div`
 line-height: 1.5;
 font-size: .9rem;
-
+`
+const DownloadButton = styled(Button)`
+ text-transform: capitalize !important;
+ margin-top: 1rem !important;
+  background-color: ${({ theme }) => theme.palette.background.paper} !important;
+  border:1px solid ${({ theme }) => theme.palette.primary.main} !important;
+  color:  ${({ theme }) => theme.palette.primary.main} !important;;
 `
 
 const Banner = () => {
@@ -92,14 +98,14 @@ const Banner = () => {
           user-friendly web interfaces. Proficient in modern HTML, CSS, and JavaScript frameworks like ReactJS, NextJS and Redux, with a strong understanding of UI/UX principles and cross-browser compatibility. Experienced in collaborating with designers and back-end developers to bring digital products to life.
           Adept at turning complex problems into elegant, accessible solutions.
         </ProfileSummary>
-        <Button style={{ background: "#2A2E38", textTransform: "capitalize", marginTop: "1rem" }}>
+        <DownloadButton >
           <Link
             target='_blank'
             href="/SE_Hanumantha.pdf"
             download="/SE_Hanumantha.pdf">
             Download CV
           </Link>
-        </Button>
+        </DownloadButton>
       </ProfileInfoBlock>
 
     </BannerWrapper>
